@@ -1,0 +1,289 @@
+@charset "UTF-8";
+* {
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-family: 'Kosugi', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+}
+
+.phone {
+  left: 0px;
+  width: 250px;
+  padding: 10px;
+  background-color: #eaeaea;
+  border: solid 3px #F1C5AD;
+  border-radius: 22.5px;
+  -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.top {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top .camera, .top .bk_line {
+  background-color: #333;
+}
+
+.top .camera {
+  position: absolute;
+  left: 31%;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.top .bk_line {
+  position: absolute;
+  width: 45px;
+  height: 5px;
+  border-radius: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.screen {
+  height: 350px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.screen .pages {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  font-size: 0px;
+  left: 0px;
+}
+
+.screen .pages .page {
+  font-size: initial;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.screen .pages .page .logo {
+  display: block;
+  width: 100%;
+  height: 110%;
+}
+
+.page1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bottom {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bottom .button {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  font-size: 24px;
+  color: grey;
+  cursor: pointer;
+  border: solid 2px #F1C5AD;
+}
+
+.bottom .button:hover {
+  background-color: #ddd;
+}
+
+.status, .phone_name {
+  color: white;
+  margin: 0;
+}
+
+.status {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.phone_name {
+  margin: 10px;
+}
+
+.buttons button {
+  background-color: transparent;
+  border: solid 1px rgba(234, 234, 234, 0.2);
+  color: white;
+  padding: 5px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+#buylist {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#buylist h3 {
+  padding: 10px;
+  margin-top: -8px;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: 10px;
+  font-weight: 550;
+  border-bottom: solid 3px #444;
+  background-color: #948CA9;
+  color: #f3f3f3;
+}
+
+#buylist .buy_item {
+  position: relative;
+  padding: 6px;
+  list-style: none;
+  border: solid 2px #444;
+  margin-top: 3px;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+#buylist .buy_item label {
+  font-size: 15px;
+  margin-right: -5px;
+}
+
+#buylist .buy_item input {
+  width: 60%;
+  border: solid 2px #444;
+  margin-right: -5px;
+  padding: 2px;
+  margin-top: 2px;
+}
+
+#buylist .buy_item #addbtn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 22px;
+}
+
+#buylist .buy_item #addbtn:hover {
+  color: #948CA9;
+}
+
+#buylist #items_list {
+  margin-top: 10px;
+  padding: 3px;
+}
+
+#buylist #items_list .price {
+  display: inline-block;
+  position: absolute;
+  padding-right: 5px;
+  padding-left: 5px;
+  top: 2px;
+  right: 35px;
+  background-color: #F49C0E;
+}
+
+#buylist #items_list .price::after {
+  content: "¥";
+}
+
+#buylist #items_list .del_btn {
+  display: inline-block;
+  position: absolute;
+  padding: 0px 6px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#buylist #items_list .del_btn:hover {
+  background-color: #948CA9;
+  color: #f3f3f3;
+}
+
+#buylist #items_list .total {
+  background-color: #948CA9;
+  color: #f3f3f3;
+  font-weight: 500;
+}
+
+#buylist #items_list .price.price2 {
+  background-color: #948CA9;
+  margin-top: 3px;
+}
+/*# sourceMappingURL=style.css.map */

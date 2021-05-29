@@ -1,0 +1,228 @@
+$color_black: #444;
+$color_yellow: #FFC954;
+$color_red: #948CA9;
+$color_white: #f3f3f3;
+$color_grey: #333;
+$color_pink: #F5BCC5;
+$color_yellow2: #F49C0E;
+
+*{
+    // border: solid 1px;
+    position: relative;
+    transition: 0.5s;
+    font-family: 'Kosugi', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #222
+}
+.phone{
+    left: 0px;
+    width: 250px;
+    padding: 10px;
+    background-color: #eaeaea;
+    border: solid 3px #F1C5AD;
+    border-radius: 22.5px;
+    box-shadow: 0 0 20px rgba(white,0.2);
+}
+.top{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    .camera, .bk_line{
+        background-color: #333;
+    }
+    .camera{
+        position: absolute;
+        left: 31%;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+    }
+    .bk_line{
+        position: absolute;
+        width: 45px;
+        height: 5px;
+        border-radius: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.screen{
+    height: 350px;
+    overflow: hidden;
+    cursor: pointer;
+    .pages{
+        width: 100%;
+        height: 100%;
+        white-space: nowrap;
+        font-size: 0px;
+        left: 0px;
+        .page{
+            font-size: initial;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            overflow: hidden;
+            .logo{
+                display: block;
+                width: 100%;
+                height: 110%;
+            }
+        }
+    }
+}
+.page1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .button{
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 100%;
+        font-size: 24px;
+        color: grey;
+        cursor: pointer;
+        border: solid 2px #F1C5AD;
+        &:hover{
+            background-color: #ddd;
+        }
+    }
+}
+.status, .phone_name{
+    color:white;
+    margin: 0;
+}
+.status{
+    margin-top: 20px;
+    font-size: 15px;
+}
+.phone_name{
+    margin: 10px;
+}
+.buttons button{
+    background-color: transparent;
+    border: solid 1px rgba(#eaeaea,0.2);
+    color: white;
+    padding: 5px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    &:hover{
+        background-color: #fff;
+        color: #333;
+    }
+}
+
+#buylist{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    transition: 0.5s;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    h3{
+        padding: 10px;
+        margin-top: -8px;
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-bottom: 10px;
+        font-weight: 550;
+        border-bottom: solid  3px $color_black;
+        background-color: $color_red;
+        color: $color_white;
+    }
+    .buy_item{
+        position: relative;
+        padding: 6px;
+        list-style: none;
+        border: solid 2px $color_black;
+        margin-top: 3px;
+        font-weight: 900;
+        vertical-align: middle;
+        label{
+            font-size: 15px;
+            margin-right: -5px;
+        }
+        input{
+            width: 60%;
+            border: solid 2px $color_black;
+            margin-right: -5px;
+            padding: 2px;
+            margin-top: 2px;
+        }
+        #addbtn{
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 22px;
+            &:hover{
+                color: $color_red;
+            }
+        }
+    }
+    #items_list{
+        margin-top: 10px;
+        padding: 3px;
+        .price{
+            display: inline-block;
+            position: absolute;
+            padding-right: 5px;
+            padding-left: 5px;
+            top: 2px;
+            right: 35px;
+            background-color: $color_yellow2;
+            &::after{
+                content: "¥"
+            }
+        }
+        .del_btn{
+            display: inline-block;
+            position: absolute;
+            padding: 0px 6px;
+            right: 10px;
+            cursor: pointer;
+            &:hover{
+                background-color: $color_red;
+                color: $color_white;
+            }
+        }
+        .total{
+            background-color: $color_red;
+            color: $color_white;
+            font-weight: 500;
+        }
+        .price.price2{
+            background-color: $color_red;
+            margin-top: 3px;
+        }
+    }
+}
+
+
